@@ -22,6 +22,7 @@ namespace LinkedListDemo
                 temp.next = node;
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
+            Sort();
         }
 
         internal void Display()
@@ -162,6 +163,27 @@ namespace LinkedListDemo
             temp1.next = temp2;
 
             return true;
+        }
+
+        internal Node Sort()
+        {
+            Node preNode = head;
+            Node nextNode = head;
+            while (preNode != null)
+            {
+                while (nextNode.next != null)
+                {
+                    if (nextNode.data > nextNode.next.data)
+                    {
+                        int temp = nextNode.data;
+                        nextNode.data = nextNode.next.data;
+                        nextNode.next.data = temp;
+                    }
+                    nextNode = nextNode.next;
+                }
+                preNode = preNode.next;
+            }
+            return head;
         }
         
     }

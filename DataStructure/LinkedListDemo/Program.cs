@@ -16,9 +16,9 @@ namespace LinkedListDemo
             link.Add(70);
             link.Insert(2,40);
             link.Display();
-            link.RemoveInBetweenNodes(2);
-            link.Display();
             Console.WriteLine("The Size of Linked List is: "+ link.Size());
+            link.Sort();
+            link.Display();
             Console.ReadKey();
         }
     }
