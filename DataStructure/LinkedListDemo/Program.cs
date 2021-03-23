@@ -12,8 +12,8 @@ namespace LinkedListDemo
         {
             LinkedList link = new LinkedList();
             link.Add(56);
-            link.Add(30);
             link.Add(70);
+            link.Insert(1,30);
             link.Display();
             Console.ReadKey();
         }
