@@ -124,6 +124,45 @@ namespace LinkedListDemo
             }
             return false;
         }
+
+        internal int Size()
+        {
+            int count = 1;
+            Node temp = head;
+            while (temp.next!=null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            return count;
+        }
+
+        public bool  RemoveInBetweenNodes(int pos)
+        {
+            Node temp1 = head;
+            Node temp2 = head;
+            if ( pos < 2 || pos == Size())
+            {
+                Console.WriteLine("IndexOutOfRange");
+                return false;
+            }
+            int count = 0;
+            while ( count != pos - 1 )
+            {
+                temp1 = temp1.next;
+                count++;
+            }
+            count = 0;
+            while ( count != pos + 1 )
+            {
+                temp2 = temp2.next;
+                count++;
+            }
+            Console.WriteLine("The Value of {0} is removed from the Linked List", temp1.next.data);
+            temp1.next = temp2;
+
+            return true;
+        }
         
     }
 

@@ -36,5 +36,22 @@ namespace MSTest
             //Assert
             Assert.AreEqual(true, result);
         }
+
+        [TestMethod]
+        public void GivenPosition_WhenDeleted_ThenReturnIsValid()
+        {
+            //AAA
+            //Arrange
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(40);
+            list.Add(76);
+            //Act
+            bool result = list.RemoveInBetweenNodes(2);
+            //Assert
+            Assert.AreEqual(true, result);
+        }
+
     }
 }
