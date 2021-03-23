@@ -15,6 +15,8 @@ namespace LinkedListDemo
             link.Add(70);
             link.Insert(1,30);
             link.Display();
+            link.RemoveFirstNode();
+            link.Display();
             Console.ReadKey();
         }
     }

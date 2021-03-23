@@ -75,8 +75,14 @@ namespace LinkedListDemo
             Console.WriteLine("Node is inserted at position {0} with Value of {1}", pos, node.data);
             return head;
         }
-        
 
+        internal Node RemoveFirstNode()
+        {
+            head = head.next;
+            Console.Write("\n");
+            return head;
+        }
+        
     }
 
 }
