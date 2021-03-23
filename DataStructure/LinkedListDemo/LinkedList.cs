@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LinkedListDemo
 {
-    class LinkedList
+    public class LinkedList
     {
         internal Node head; //new 
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -37,6 +37,7 @@ namespace LinkedListDemo
                 Console.Write(temp.data + " ");
                 temp = temp.next; //temp=null
             }
+            Console.WriteLine();
         }
 
         internal Node Insert(int pos, int data)
@@ -103,6 +104,25 @@ namespace LinkedListDemo
             preNode.next = null;
             Console.WriteLine();
             return head;
+        }
+
+        public bool Search(int data)
+        {
+            Node temp = head;
+            while (temp.next!=null)
+            {
+                if (temp.data == data)
+                {
+                    Console.WriteLine("The Value of {0} is present in the Linked List", data);
+                    return true;
+                }
+                temp = temp.next;
+                if (temp.next == null)
+                {
+                    Console.WriteLine("The Value of {0} is not present in the Linked List", data);
+                }
+            }
+            return false;
         }
         
     }

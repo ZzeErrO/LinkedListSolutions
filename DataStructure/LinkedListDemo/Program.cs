@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedListDemo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,8 +15,7 @@ namespace LinkedListDemo
             link.Add(70);
             link.Insert(1,30);
             link.Display();
-            link.RemoveLastNode();
-            link.Display();
+            link.Search(30);
             Console.ReadKey();
         }
     }
