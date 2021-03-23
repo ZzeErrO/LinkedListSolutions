@@ -78,8 +78,30 @@ namespace LinkedListDemo
 
         internal Node RemoveFirstNode()
         {
+            if (head == null)
+            {
+                return null;
+            }
             head = head.next;
             Console.Write("\n");
+            return head;
+        }
+
+        internal Node RemoveLastNode()
+        {
+            Node temp = head;
+            Node preNode = head;
+            if (head == null)
+            {
+                return null;
+            }
+            while (temp.next != null)
+            {
+                preNode = temp;
+                temp = temp.next;
+            }
+            preNode.next = null;
+            Console.WriteLine();
             return head;
         }
         
