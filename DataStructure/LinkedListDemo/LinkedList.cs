@@ -16,8 +16,10 @@ namespace LinkedListDemo
                 this.head = node;
             else
             {
-                node.next = head;
-                head = node;
+                Node temp = head;
+                while (temp.next != null)
+                    temp = temp.next;
+                temp.next = node;
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
