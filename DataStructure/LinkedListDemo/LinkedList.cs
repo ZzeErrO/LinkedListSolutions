@@ -40,7 +40,7 @@ namespace LinkedListDemo
             Console.WriteLine();
         }
 
-        internal Node Insert(int pos, int data)
+        public bool Insert(int pos, int data)
         {
             Node node = new Node(data);
             Node temp1 = head;
@@ -49,12 +49,12 @@ namespace LinkedListDemo
             {
                 node.next = head;
                 head = node;
-                return head;
+                return true;
             }
             else if (pos < 0)
             {
                 Console.WriteLine("Invalid Position");
-                return head;
+                return false;
             }
             else
             {
@@ -74,7 +74,7 @@ namespace LinkedListDemo
             temp1.next = node;
             node.next = temp2;
             Console.WriteLine("Node is inserted at position {0} with Value of {1}", pos, node.data);
-            return head;
+            return true;
         }
 
         internal Node RemoveFirstNode()

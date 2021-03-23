@@ -21,5 +21,20 @@ namespace MSTest
             //Assert
             Assert.AreEqual(true, result);
         }
+
+        [TestMethod]
+        public void GivenValue_WhenInserted_ThenReturnIsValid()
+        {
+            //AAA
+            //Arrange
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(76);
+            //Act
+            bool result = list.Insert(2,40);
+            //Assert
+            Assert.AreEqual(true, result);
+        }
     }
 }
